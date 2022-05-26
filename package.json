@@ -1,5 +1,5 @@
 {
-  "name": "npm-example9",
+  "name": "npm-example10",
   "version": "0.0.3",
   "scripts": {
     "start": "node helloworld"
@@ -11,7 +11,30 @@
         "vue2-dropzone": "^3.5.2",
         "vuetify": "^1.5.18",
         "zxcvbn": "^4.4.2",
-        "axios": "^0.19.2"
+        "axios": "^0.19.2",
+     "bootstrap": "4.4.1",
+    "events": "^3.1.0",
+    "focus-trap-react": "^8.1.0",
+    "jquery": "^3.5.1",
+    "multiselect-react-dropdown": "^2.0.4",
+    "popper.js": "1.16.0",
+    "qs": "^6.9.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-file-download": "^0.3.5",
+    "react-json-view": "^1.21.3",
+    "react-loading-overlay": "^1.0.1",
+    "react-promise-tracker": "^2.1.0",
+    "react-router-dom": "^5.1.2",
+    "react-router-global-history": "^1.1.0",
+    "react-scripts": "^4.0.1",
+    "react-select": "^3.1.0",
+    "react-tooltip": "^4.2.6",
+    "sessionstorage": "^0.1.0",
+    "sweetalert": "^2.1.2",
+    "bindings": "1.5.0",
+    "file-uri-to-path":"1.0.0",
+    "nan":"2.15.0"
   },
   "devDependencies": {
     "debug": "^4.1.1"
