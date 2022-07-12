@@ -27,7 +27,7 @@ steps:
       {
         "files": [
           {
-            "pattern": "k-generic-local/crx/jfrog.txt.gpg",
+            "pattern": "xray-scan-generic/nanopb-0.3.9.5.tar.gz",
             "target": "$(Build.ArtifactStagingDirectory)/"
           }
         ]
@@ -46,7 +46,7 @@ steps:
       {
         "files": [
           {
-            "pattern": "$(Build.ArtifactStagingDirectory)/*.gpg",
+            "pattern": "$(Build.ArtifactStagingDirectory)/*.gz",
             "target": "test-1234"
           }
         ]
