@@ -18,11 +18,10 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-
 - task: JFrogGenericArtifacts@1
   inputs:
     command: 'Download'
-    connection: 'clouddsein'
+    connection: 'clouddse_jfrog'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
@@ -41,7 +40,7 @@ steps:
 - task: JFrogGenericArtifacts@1
   inputs:
     command: 'Upload'
-    connection: 'clouddsein'
+    connection: 'clouddse_jfrog'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
@@ -58,6 +57,6 @@ steps:
     failNoOp: true
 - task: JFrogPublishBuildInfo@1
   inputs:
-    artifactoryConnection: 'clouddsein'
+    artifactoryConnection: 'clouddse_jfrog'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
