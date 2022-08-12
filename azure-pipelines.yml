@@ -21,7 +21,7 @@ steps:
 - task: JFrogGenericArtifacts@1
   inputs:
     command: 'Download'
-    connection: 'clouddse_jfrog'
+    connection: 'clouddsein'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
@@ -40,7 +40,7 @@ steps:
 - task: JFrogGenericArtifacts@1
   inputs:
     command: 'Upload'
-    connection: 'clouddse_jfrog'
+    connection: 'clouddsein'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
@@ -57,6 +57,6 @@ steps:
     failNoOp: true
 - task: JFrogPublishBuildInfo@1
   inputs:
-    artifactoryConnection: 'clouddse_jfrog'
+    artifactoryConnection: 'clouddsein'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
