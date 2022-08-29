@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: JANA-2016
+  name: JANA-2016
 
 steps:
 - script: echo Hello, world!
