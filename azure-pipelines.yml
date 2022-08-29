@@ -36,9 +36,8 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     failNoOp: true
-
-- task: JFrogPublishBuildInfo@1
+- task: ArtifactoryPublishBuildInfo@1
   inputs:
-    artifactoryConnection: 'clouddsein'
+    artifactoryService: 'clouddsein'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
