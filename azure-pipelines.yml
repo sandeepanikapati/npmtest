@@ -18,9 +18,9 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: JFrogGenericArtifacts@1
+
+- task: ArtifactoryGenericDownload@3
   inputs:
-    command: 'Download'
     connection: 'clouddsein'
     specSource: 'taskConfiguration'
     fileSpec: |
@@ -37,24 +37,6 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     failNoOp: true
 
-- task: JFrogGenericArtifacts@1
-  inputs:
-    command: 'Upload'
-    connection: 'clouddsein'
-    specSource: 'taskConfiguration'
-    fileSpec: |
-      {
-        "files": [
-          {
-            "pattern": "$(Build.ArtifactStagingDirectory)/*.gz",
-            "target": "test-1234"
-          }
-        ]
-      }
-    collectBuildInfo: true
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-    failNoOp: true
 - task: JFrogPublishBuildInfo@1
   inputs:
     artifactoryConnection: 'clouddsein'
