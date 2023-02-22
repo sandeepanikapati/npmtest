@@ -13,8 +13,8 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- task: JFrogNpm@1
+- task: ArtifactoryNpm@2
   inputs:
     command: 'install'
-    artifactoryConnection: 'clouddse_jfrog'
+    artifactoryService: 'clouddsein'
     sourceRepo: 'anusha-test-npm'
