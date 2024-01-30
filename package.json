@@ -10,8 +10,7 @@
         "vue-top-progress": "^0.7.0",
         "vue2-dropzone": "^3.5.2",
         "vuetify": "^1.5.18",
-        "zxcvbn": "^4.4.2",
-        "axios": "^0.19.2"
+        "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "debug": "^4.1.1"
