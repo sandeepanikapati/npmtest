@@ -19,6 +19,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    env:
+      OIDC_AUDIENCE: 'jfrog-github'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -47,3 +49,11 @@ jobs:
           -d \
           "{\"grant_type\": \"urn:ietf:params:oauth:grant-type:token-exchange\", \"subject_token_type\":\"urn:ietf:params:oauth:token-type:id_token\", \"subject_token\": \"$ID_TOKEN\", \"provider_name\": \"san-git-intergation\"}" | jq .access_token | tr -d '"')
           echo ACCESS_TOKEN=$ACCESS_TOKEN >> $GITHUB_OUTPUT
+      - name: Get ID Token (@actions/core method)
+        uses: actions/github-script@v7
+        id: idtoken
+        with:
+          script: |
+            const coredemo = require('@actions/core');
+            let id_token = await coredemo.getIDToken(process.env.OIDC_AUDIENCE);
+            coredemo.setOutput('id_token', id_token);
